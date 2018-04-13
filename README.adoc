@@ -14,14 +14,13 @@ On an existing GPDB installation:
 [source,bash]
 ----
 $ madpack [-s schema_name] -p greenplum -c user@host:port/database install
+----
 
 * Copy the files __Server/scripts/zip_code_states.csv__ and __Server/scripts/\*.s\*__ to __/home/gpadmin__
-  
 [source,bash]
 ----
  $ scp scripts/zip_codes_states.csv scripts/*.s* user@host:/home/gpadmin
-
- gpadmin@192.168.9.132's password:
+ user@host's password: ******
  zip_codes_states.csv                                                            100% 2363KB   2.3MB/s   00:00
  model.sql                                                                       100% 5371     5.3KB/s   00:00
  predict.sql                                                                     100%  102     0.1KB/s   00:00
