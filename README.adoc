@@ -6,11 +6,12 @@
 
 On an existing GPDB installation: 
 
-  - Download + Install MADLib and PostGIS. 
-  For Greenplum 5.7.x, both libraries are available on under __Release Download Files/Greenplum Advanced Analytics__ on https://network.pivotal.io/products/pivotal-gpdb#/releases/73874/file_groups/930.
-  For information on installing PostGIS and MADLib, please check https://gpdb.docs.pivotal.io/570/ref_guide/extensions/postGIS.html and https://gpdb.docs.pivotal.io/570/ref_guide/extensions/madlib.html, respectively.
+* Download and Install MADLib & PostGIS:
+** For Greenplum version 5.7.x, MADLib & PostGIS libraries are available on under __Release Download Files/Greenplum Advanced Analytics__ on https://network.pivotal.io/products/pivotal-gpdb#/releases/73874/file_groups/930.
+** For PostGIS installation instructions, please check https://gpdb.docs.pivotal.io/570/ref_guide/extension`s/postGIS.html.z
+** For MADLib installation instructions, please check https://gpdb.docs.pivotal.io/570/ref_guide/extensions/madlib.html.
 
-  - Copy the files __Server/scripts/zip_code_states.csv__ and __Server/scripts/\*.s\*__ to __/home/gpadmin__
+* Copy the files __Server/scripts/zip_code_states.csv__ and __Server/scripts/\*.s\*__ to __/home/gpadmin__
   
 [source,bash]
 ----
@@ -23,7 +24,7 @@ On an existing GPDB installation:
  prediction.sh                                                                   100%  402     0.4KB/s   00:00
 ----
 
-  - Login to the Greenplum DB instance and run the model.sql script. This will create the table structures we're using. Please ignore the '"transaction_info" doesn't exist' error, if it's your first time running it.
+* Login to the Greenplum DB instance and run the model.sql script. This will create the table structures we're using. Please ignore the '"transaction_info" doesn't exist' error, if it's your first time running it.
 
 [source,bash]
 ----
@@ -162,7 +163,7 @@ INFO: Started WebConsoleApp in 4.958 seconds (JVM running for 5.227)
 
 Make sure you can access the application at http://<host>:8080/index.html
 
-- If you're deploying to CloudFoudry, just create a user-provided service as shown at __WebConsole/cf-createservice.txt__ and use the manifest at __WebConsole/manifest.yml__ to push the app.
+* If you're deploying to CloudFoudry, just create a user-provided service as shown at __WebConsole/cf-createservice.txt__ and use the manifest at __WebConsole/manifest.yml__ to push the app.
 
 [source,bash]
 ----
