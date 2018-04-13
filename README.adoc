@@ -10,12 +10,16 @@ On an existing GPDB installation:
 ** For Greenplum version 5.7.x, MADLib & PostGIS libraries are available on under __Release Download Files/Greenplum Advanced Analytics__ on https://network.pivotal.io/products/pivotal-gpdb#/releases/73874/file_groups/930.
 ** For PostGIS installation instructions, please check https://gpdb.docs.pivotal.io/570/ref_guide/extension`s/postGIS.html.z
 ** For MADLib installation instructions, please check https://gpdb.docs.pivotal.io/570/ref_guide/extensions/madlib.html.
+** After installing the MADlib package, run the madpack command to add MADlib functions to Greenplum Database. madpack is in $GPHOME/madlib/bin.
+[source,bash]
+----
+$ madpack [-s schema_name] -p greenplum -c user@host:port/database install
 
 * Copy the files __Server/scripts/zip_code_states.csv__ and __Server/scripts/\*.s\*__ to __/home/gpadmin__
   
 [source,bash]
 ----
- $ scp scripts/zip_codes_states.csv scripts/\*.s\* gpadmin@192.168.9.132:/home/gpadmin
+ $ scp scripts/zip_codes_states.csv scripts/*.s* user@host:/home/gpadmin
 
  gpadmin@192.168.9.132's password:
  zip_codes_states.csv                                                            100% 2363KB   2.3MB/s   00:00
