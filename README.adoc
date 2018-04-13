@@ -454,3 +454,15 @@ You can also scale the emulator to several instances in order to show scalabilit
 Let it run for at least one minute while checking your browser. You should notice transactions and possible frauds being shown.
 
 image::screenshot.png[Demo Screenshot]
+
+### Important note: 
+1. To run the demo, we need to add the network virtual ip for gemfire. 
+```[gpadmin@gpdb-sandbox network-scripts]$ cat  ifcfg-ens33:0
+NM_CONTROLLED="no"
+DEVICE="ens33:0"
+ONBOOT="yes"
+BOOTPROTO="static"
+IPADDR="192.168.9.132"
+NETMASK="255.255.255.0"
+[gpadmin@gpdb-sandbox network-scripts]$ 
+```
